@@ -1,0 +1,44 @@
+.banner{
+  width: 100%;
+  height: calc(100vh - 62px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+}
+
+.banner__CTA{
+  position: absolute;
+  padding: 10px 20px;
+  bottom: 40px;
+  left: 50%;
+  font-size: 40px;
+  color: white;
+  transition: all 200ms ease-in-out;
+  animation-name: bannerCTAAnim;
+  animation-duration: 700ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-delay: 200ms;
+}
+
+.banner__CTA:hover{
+  animation-play-state: running;
+}
+
+@keyframes bannerCTAAnim {
+  0% {
+      bottom: 40px;
+      padding-top: 10px;
+  }
+  50% {
+      bottom: 36px;
+      padding-top: 14px;
+  }
+  100% {
+      bottom: 40px;
+      padding-top: 10px;
+  }
+}
