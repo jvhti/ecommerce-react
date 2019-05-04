@@ -12,6 +12,7 @@
   padding: 10px 20px;
   bottom: 40px;
   left: 50%;
+  transform: translateX(-50%);
   font-size: 40px;
   color: white;
   transition: all 200ms ease-in-out;
