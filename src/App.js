@@ -13,7 +13,9 @@ function App() {
           <li><a href="#">Login</a></li>
         </NavbarComponent>
       </header>
-      <Banner/>
+      <Banner hrefCTA="#body" backgroundImage="url('https://unsplash.com/photos/vaWZyE1Z6xg/download?force=true')">
+        Buy what you want<small>When you want</small>
+      </Banner>
     </div>
   );
 }
