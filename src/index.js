@@ -10,12 +10,14 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faSearch,
   faBars,
-  faAngleDoubleDown
+  faAngleDoubleDown,
+  faCartPlus
     } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faSearch);
 library.add(faBars);
 library.add(faAngleDoubleDown);
+library.add(faCartPlus);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
