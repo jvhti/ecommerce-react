@@ -1,6 +1,7 @@
 import React from 'react';
 import NavbarComponent from './Components/Navbar/NavbarComponent.js';
 import Banner from './Components/Banner/Banner.js';
+import LoginModal from './Components/LoginModal/LoginModal.js';
 
 function App() {
   return (
@@ -16,6 +17,35 @@ function App() {
       <Banner hrefCTA="#body" backgroundImage="url('https://unsplash.com/photos/vaWZyE1Z6xg/download?force=true')">
         Buy what you want<small>When you want</small>
       </Banner>
+
+      <LoginModal/>
+
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
+      Lorem ipsum <br/>
     </div>
   );
 }
