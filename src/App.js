@@ -2,6 +2,7 @@ import React from 'react';
 import NavbarComponent from './Components/Navbar/NavbarComponent.js';
 import Banner from './Components/Banner/Banner.js';
 import ProductSection from './Components/Product/ProductSection.js';
+import LoginModal from './Components/LoginModal/LoginModal.js';
 
 function App() {
   return (
