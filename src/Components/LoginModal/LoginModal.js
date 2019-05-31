@@ -6,52 +6,71 @@ class LoginModal extends React.Component{
   constructor(props){
     super(props);
 
-    this.labelEmail = React.createRef();
     this.inputEmail = React.createRef();
-    this.labelPassword = React.createRef();
+
+    this.state = {
+      email: "",
+      password: "",
+      emailValid: null,
+      passwordValid: null
+    };
   }
 
   componentDidMount(){
     this.inputEmail.current.focus();
   }
 
-  updateFieldValidation(ev){
-    const tgLabel = (ev.target.type === "email") ? this.labelEmail.current : this.labelPassword.current;
+  submitLogin(ev){
+    ev.preventDefault();
 
-    if(ev.target.value === ""){
-      tgLabel.classList.remove("valid");
-      tgLabel.classList.remove("invalid");
-      return;
-    }
+    console.log(this.state.email, this.state.password);
+  }
 
-    if(ev.target.validity.valid){
-      tgLabel.classList.add("valid");
-      tgLabel.classList.remove("invalid");
-    }else{
-      tgLabel.classList.add("invalid");
-      tgLabel.classList.remove("valid");
+  updateField(ev){
+    const val = ev.target.value;
+    const validity = (val === "") ? null : ev.target.validity.valid;
+    const state = {};
+
+    switch(ev.target.name){
+      case "email":
+        state.email = val;
+        state.emailValid = validity;
+        break;
+
+      case "password":
+        state.password = val;
+        state.passwordValid = validity;
+        break;
     }
+    
+    this.setState(state);
+  }
+  
+  getValidityState(field){
+    const isValid = (field === "email") ? this.state.emailValid : this.state.passwordValid;
+    
+    return (isValid == null ) ? null : (isValid ? "valid" : "invalid")
   }
   
   render() {
     return (
         <div className="login_modal">
           <h5 className="login_modal__title">Login</h5>
-          <div className="login_modal__form">
+          <form action="#" method="post" onSubmit={this.submitLogin.bind(this)} className="login_modal__form">
             <div className="login_modal__form__field">
-              <label ref={this.labelEmail}>E-mail: </label>
-              <input ref={this.inputEmail} placeholder="example@example.com" type="email" required onChange={this.updateFieldValidation.bind(this)}/>
+              <label className={this.getValidityState('email')}>E-mail: </label>
+              <input name="email" ref={this.inputEmail} value={this.state.email} placeholder="example@example.com" type="email" required onChange={this.updateField.bind(this)}/>
             </div>
             <div className="login_modal__form__field">
-              <label ref={this.labelPassword}>Password: </label>
-              <input placeholder="Your Password" type="password" required onChange={this.updateFieldValidation.bind(this)}/>
+              <label className={this.getValidityState('password')}>Password: </label>
+              <input name="password" value={this.state.password} minLength="4" placeholder="Your Password" type="password" required onChange={this.updateField.bind(this)}/>
               <a href="#">Forgot your password?</a>
             </div>
             <div className="login_modal__form__actions">
-              <button className="btn btn--primary">Login</button>
-              <button className="btn btn--default btn--border">Register</button>
+              <button className="btn btn--primary" type="submit">Login</button>
+              <a className="btn btn--default btn--border">Register</a>
             </div>
-          </div>
+          </form>
         </div>
     );
   }

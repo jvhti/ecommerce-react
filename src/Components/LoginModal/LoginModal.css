@@ -89,7 +89,7 @@
     color: #D32F2F;
 }
 
-.login_modal__form__field input:valid{
+.login_modal__form__field input:not(:placeholder-shown):valid{
     border-color: #388E3C;
 }
 
