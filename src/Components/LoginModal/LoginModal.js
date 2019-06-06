@@ -56,6 +56,7 @@ class LoginModal extends React.Component{
     return (
         <div className="login_modal">
           <h5 className="login_modal__title">Login</h5>
+          <button className="login_modal__close_btn" type="button" onClick={this.props.onClickCloseEvent}>x</button>
           <form action="#" method="post" onSubmit={this.submitLogin.bind(this)} className="login_modal__form">
             <div className="login_modal__form__field">
               <label className={this.getValidityState('email')}>E-mail: </label>
