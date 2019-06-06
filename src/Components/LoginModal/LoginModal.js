@@ -1,5 +1,4 @@
 import React from 'react';
-import './LoginModal.css';
 
 class LoginModal extends React.Component{
 
@@ -54,20 +53,20 @@ class LoginModal extends React.Component{
   
   render() {
     return (
-        <div className="login_modal">
-          <h5 className="login_modal__title">Login</h5>
-          <button className="login_modal__close_btn" type="button" onClick={this.props.onClickCloseEvent}>x</button>
-          <form action="#" method="post" onSubmit={this.submitLogin.bind(this)} className="login_modal__form">
-            <div className="login_modal__form__field">
+        <div className="login_modal modal">
+          <h5 className="modal__title">Login</h5>
+          <button className="modal__close_btn" type="button" onClick={this.props.onClickCloseEvent}>x</button>
+          <form action="#" method="post" onSubmit={this.submitLogin.bind(this)} className="modal__form">
+            <div className="modal__form__field">
               <label className={this.getValidityState('email')}>E-mail: </label>
               <input name="email" ref={this.inputEmail} value={this.state.email} placeholder="example@example.com" type="email" required onChange={this.updateField.bind(this)}/>
             </div>
-            <div className="login_modal__form__field">
+            <div className="modal__form__field">
               <label className={this.getValidityState('password')}>Password: </label>
               <input name="password" value={this.state.password} minLength="4" placeholder="Your Password" type="password" required onChange={this.updateField.bind(this)}/>
               <a href="#">Forgot your password?</a>
             </div>
-            <div className="login_modal__form__actions">
+            <div className="modal__form__actions">
               <button className="btn btn--primary" type="submit">Login</button>
               <a className="btn btn--default btn--border">Register</a>
             </div>
