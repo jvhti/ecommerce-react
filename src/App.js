@@ -1,8 +1,8 @@
 import React from 'react';
 import NavbarComponent from './Components/Navbar/NavbarComponent.js';
 import Banner from './Components/Banner/Banner.js';
-import LoginModal from './Components/LoginModal/LoginModal.js';
-import ForgotPasswordModal from './Components/ForgotPasswordModal/ForgotPasswordModal.js';
+import LoginModal from './Components/Modals/LoginModal/LoginModal.js';
+import ForgotPasswordModal from './Components/Modals/ForgotPasswordModal/ForgotPasswordModal.js';
 
 function App() {
   return (
