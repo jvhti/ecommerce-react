@@ -68,7 +68,7 @@ class LoginModal extends React.Component{
             </div>
             <div className="modal__form__actions">
               <button className="btn btn--primary" type="submit">Login</button>
-              <a className="btn btn--default btn--border">Register</a>
+              <button className="btn btn--default btn--border" type="button">Register</button>
             </div>
           </form>
         </div>
