@@ -2,6 +2,7 @@ import React from 'react';
 import NavbarComponent from './Components/Navbar/NavbarComponent.js';
 import Banner from './Components/Banner/Banner.js';
 import LoginModal from './Components/LoginModal/LoginModal.js';
+import ForgotPasswordModal from './Components/ForgotPasswordModal/ForgotPasswordModal.js';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </Banner>
 
       <LoginModal/>
+      <ForgotPasswordModal/>
 
       Lorem ipsum <br/>
       Lorem ipsum <br/>
