@@ -26,58 +26,45 @@ import React from 'react';
  *   - buttonAlign: left|right|center -- Alignment of the Button
  */
 
-class MessageModal extends React.Component{
+const MessageModal = props => {
+  let buttons = new Array();
+  let modalActionsClasses = "";
 
-  constructor(props){
-    super(props);
+  switch(props.buttons){
+    default:
+    case "ok":
+      buttons.push (
+        <button ref={props.refButtonOk} key="ok" className={"btn btn--" + (props.buttonColor || "default") + " " + (props.buttonClasses || "")} type="button" onClick={props.buttonEvent || props.onClickCloseEvent}>{(props.buttonText || "Ok" )}</button>
+      );
 
-    // this.inputEmail = React.createRef();
+      modalActionsClasses = props.buttonAlign || "right";
+      if(modalActionsClasses !== "") modalActionsClasses = "modal__actions--" + modalActionsClasses;
+    break;
+    case "yes_no":
+      buttons.push (
+        <button ref={props.refButtonYes} key="yes" className={"btn btn--" + (props.buttonYesColor || "primary") + " " + (props.buttonYesClasses || "")} type="button" onClick={props.buttonYesEvent}>{(props.buttonYesText || "Yes" )}</button>
+      );
+
+      buttons.push (
+        <button ref={props.refButtonNo} key="no" className={"btn btn--" + (props.buttonNoColor || "default") + " " + (props.buttonNoClasses || "")} type="button" onClick={(props.buttonNoCloses !== false) ? props.buttonNoEvent : props.onClickCloseEvent}>{(props.buttonYesText || "No" )}</button>
+      );
+    break;
+    case "none":
+    break;
   }
 
-  componentDidMount(){
-    // this.inputEmail.current.focus();
-  }
-  
-  render() {
-    let buttons = new Array();
-    let modalActionsClasses = "";
-
-    switch(this.props.buttons){
-      default:
-      case "ok":
-        buttons.push (
-          <button className={"btn btn--" + (this.props.buttonColor || "default") + " " + (this.props.buttonClasses || "")} type="button" onClick={this.props.buttonEvent || this.props.onClickCloseEvent}>{(this.props.buttonText || "Ok" )}</button>
-        );
-
-        modalActionsClasses = this.props.buttonAlign || "right";
-        if(modalActionsClasses !== "") modalActionsClasses = "modal__actions--" + modalActionsClasses;
-      break;
-      case "yes_no":
-        buttons.push (
-          <button className={"btn btn--" + (this.props.buttonYesColor || "primary") + " " + (this.props.buttonYesClasses || "")} type="button" onClick={this.props.buttonYesEvent}>{(this.props.buttonYesText || "Yes" )}</button>
-        );
-
-        buttons.push (
-          <button className={"btn btn--" + (this.props.buttonNoColor || "default") + " " + (this.props.buttonNoClasses || "")} type="button" onClick={(this.props.buttonNoCloses !== false) ? this.props.buttonNoEvent : this.props.onClickCloseEvent}>{(this.props.buttonYesText || "No" )}</button>
-        );
-      break;
-      case "none":
-      break;
-    }
-
-    return (
-        <div className={this.props.size ? "modal modal--" + this.props.size : "modal"}>
-          <h5 className="modal__title">{this.props.title}</h5>
-          <button className="modal__close_btn" type="button" onClick={this.props.onClickCloseEvent}>x</button>
-          <div class="text--center">
-            <p>{this.props.text}</p>
-          </div>
-          <div className={"modal__actions " + (modalActionsClasses || "")}>
-            { buttons }
-          </div>
+  return (
+      <div className={props.size ? "modal modal--" + props.size : "modal"}>
+        <h5 className="modal__title">{props.title}</h5>
+        <button className="modal__close_btn" type="button" onClick={props.onClickCloseEvent}>x</button>
+        <div className="text--center">
+          <p>{props.text}</p>
         </div>
-    );
-  }
-}
+        <div className={"modal__actions " + (modalActionsClasses || "")}>
+          { buttons }
+        </div>
+      </div>
+  );
+};
 
 export default MessageModal;
