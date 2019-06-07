@@ -3,6 +3,7 @@ import NavbarComponent from './Components/Navbar/NavbarComponent.js';
 import Banner from './Components/Banner/Banner.js';
 import LoginModal from './Components/Modals/LoginModal/LoginModal.js';
 import ForgotPasswordModal from './Components/Modals/ForgotPasswordModal/ForgotPasswordModal.js';
+import MessageModal from './Components/Modals/MessageModal/MessageModal.js';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
       <LoginModal/>
       <ForgotPasswordModal/>
+      <MessageModal title="Test Title" size="md" buttons="ok" buttonColor="primary" text="asdasd asdasd asd asdasdas" buttonAlign="center"/>
 
       Lorem ipsum <br/>
       Lorem ipsum <br/>

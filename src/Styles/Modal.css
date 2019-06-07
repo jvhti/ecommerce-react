@@ -11,6 +11,10 @@
     box-shadow: 0px 2px 2px 2px rgba(0,0,0,0.2);
 }
 
+.modal--md{
+    min-width: 350px;
+}
+
 .modal__close_btn{
     position: absolute;
     right: 5px;
@@ -64,7 +68,8 @@
     text-decoration: none;
 }
 
-.modal__form__actions{
+.modal__form__actions,
+.modal__actions{
     padding: 14px 20px 0 20px;
     text-align: center;
     position: relative;
@@ -73,7 +78,8 @@
     flex-direction: row-reverse;
 }
 
-.modal__form__actions::before{
+.modal__form__actions::before,
+.modal__actions::before{
     content: '';
     position: absolute;
     left: 0;
@@ -83,9 +89,22 @@
     background: #ddd;
 }
 
-.modal__form__actions .btn{
+.modal__form__actions .btn,
+.modal__actions .btn{
     padding: 10px 15px;
     border-radius: 4px;
+}
+
+.modal__actions--center{
+    justify-content: space-around;
+}
+
+.modal__actions--left{
+    justify-content: flex-end;
+}
+
+.modal__actions--right{
+    justify-content: flex-start;
 }
 
 .modal__form__field input:not(:placeholder-shown):invalid{
