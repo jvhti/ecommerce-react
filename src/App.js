@@ -4,6 +4,7 @@ import Banner from './Components/Banner/Banner.js';
 import LoginModal from './Components/Modals/LoginModal/LoginModal.js';
 import ForgotPasswordModal from './Components/Modals/ForgotPasswordModal/ForgotPasswordModal.js';
 import MessageModal from './Components/Modals/MessageModal/MessageModal.js';
+import CategoriesSection from './Components/CategoriesSection/CategoriesSection.js';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <header>
         <NavbarComponent>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Categories</a></li>
+          <li><a href="#categories">Categories</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Login</a></li>
         </NavbarComponent>
@@ -19,37 +20,7 @@ function App() {
       <Banner hrefCTA="#body" backgroundImage="url('https://unsplash.com/photos/vaWZyE1Z6xg/download?force=true')">
         Buy what you want<small>When you want</small>
       </Banner>
-
-      <LoginModal/>
-      <ForgotPasswordModal/>
-      <MessageModal title="Test Title" size="md" buttons="ok" buttonColor="primary" text="asdasd asdasd asd asdasdas" buttonAlign="center"/>
-
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
-      Lorem ipsum <br/>
+      <CategoriesSection id="categories"/>
     </div>
   );
 }
