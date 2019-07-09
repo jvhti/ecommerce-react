@@ -19,6 +19,7 @@ function App() {
         Buy what you want<small>When you want</small>
       </Banner>
       <ProductSection/>
+      <LoginModal/>
     </div>
   );
 }
