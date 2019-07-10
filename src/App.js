@@ -5,7 +5,7 @@ import ProductSection from './Components/Product/ProductSection.js';
 import LoginModal from './Components/Modals/LoginModal/LoginModal.js';
 import ForgotPasswordModal from './Components/Modals/ForgotPasswordModal/ForgotPasswordModal.js';
 import MessageModal from './Components/Modals/MessageModal/MessageModal.js';
-import CategoriesSection from './Components/CategoriesSection/CategoriesSection.js';
+import CategoriesSection from './Components/Sections/CategoriesSection/CategoriesSection.js';
 
 function App() {
   return (

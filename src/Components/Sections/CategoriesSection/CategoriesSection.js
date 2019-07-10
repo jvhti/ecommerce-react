@@ -1,12 +1,13 @@
 import React from 'react';
 import './CategoriesSection.css';
+import '../Sections.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function CategoriesSection(props) {
   // Create list dynamically using a property
   return (
-      <section id={props.id} className="categories">
-        <h3 class="categories__title">Categories</h3>
+      <section id={props.id} className="section">
+        <h3 class="section__title">Categories</h3>
         <div className="categories__wrapper">
           <div className="categories__side">
             <div className="categories__wrapper">
