@@ -6,6 +6,7 @@
 .about_section__stats__stat__text{
   font-size: 1.2em;
   margin-top: 25px;
+  margin-bottom: 0;
   color: #ddd;
 }
 
