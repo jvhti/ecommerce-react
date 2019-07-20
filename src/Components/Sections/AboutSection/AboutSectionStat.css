@@ -1,0 +1,26 @@
+.about_section__stats__stat{
+  flex: 1;
+  text-align: center;
+}
+
+.about_section__stats__stat__text{
+  font-size: 1.2em;
+  margin-top: 25px;
+  color: #ddd;
+}
+
+.about_section__stats__stat__number{
+  font-size: 1em;
+  color: #c29521;
+}
+
+.about_section__stats__stat__icon{
+  position: relative;
+  color: #eee;
+}
+
+@media screen and (max-width: 625px){
+  .about_section__stats__stat:not(:last-child){
+    margin-bottom: 30px;
+  }
+}

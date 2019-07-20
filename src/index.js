@@ -12,13 +12,19 @@ import {
   faSearch,
   faBars,
   faAngleDoubleDown,
-  faCartPlus
+  faCartPlus,
+  faTruck,
+  faGrinStars,
+  faDolly
     } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faSearch);
 library.add(faBars);
 library.add(faAngleDoubleDown);
 library.add(faCartPlus);
+library.add(faTruck);
+library.add(faGrinStars);
+library.add(faDolly);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -8,3 +8,9 @@
   margin: 0;
   margin-bottom: 25px;
 }
+
+.section__subtitle{
+  font-size: 1.4em;
+  text-align: left;
+  margin-bottom: 25px;
+}

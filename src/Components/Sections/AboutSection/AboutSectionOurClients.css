@@ -1,0 +1,9 @@
+
+.about_section__clients{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  padding: 20px 0;
+}
