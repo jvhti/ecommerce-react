@@ -1,7 +1,7 @@
 .navbarMobile{
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
   z-index: 99;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   display: none;
