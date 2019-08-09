@@ -7,6 +7,7 @@ import ForgotPasswordModal from './Components/Modals/ForgotPasswordModal/ForgotP
 import MessageModal from './Components/Modals/MessageModal/MessageModal.js';
 import CategoriesSection from './Components/Sections/CategoriesSection/CategoriesSection.js';
 import AboutSection from './Components/Sections/AboutSection/AboutSection.js';
+import Footer from './Components/Footer/Footer.js';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       </Banner>
       <CategoriesSection id="categories"/>
       <AboutSection id="about"/>
+      <Footer/>
     </div>
   );
 }
